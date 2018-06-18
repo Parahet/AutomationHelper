@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("AutomationHelper.Assert")]
+[assembly: AssemblyTitle("AutomationHelper.Desktop")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("AutomationHelper.Assert")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyCompany("VM-SCCM")]
+[assembly: AssemblyProduct("AutomationHelper.Desktop")]
+[assembly: AssemblyCopyright("Copyright © VM-SCCM 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("19f708b9-8325-448a-bcfd-7b2bb2f32970")]
+[assembly: Guid("893f3775-2946-4774-a6d7-a971faf324ba")]
 
 // Version information for an assembly consists of the following four values:
 //

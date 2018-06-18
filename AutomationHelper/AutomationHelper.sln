@@ -10,6 +10,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomationHelper.Web", "Aut
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomationHelper.Base", "AutomationHelper.Base\AutomationHelper.Base.csproj", "{87C230D3-9409-49F0-9CAB-86ED9633736A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomationHelper.Desktop", "AutomationHelper.Desktop\AutomationHelper.Desktop.csproj", "{893F3775-2946-4774-A6D7-A971FAF324BA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{87C230D3-9409-49F0-9CAB-86ED9633736A} = {87C230D3-9409-49F0-9CAB-86ED9633736A}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +29,10 @@ Global
 		{87C230D3-9409-49F0-9CAB-86ED9633736A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87C230D3-9409-49F0-9CAB-86ED9633736A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87C230D3-9409-49F0-9CAB-86ED9633736A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{893F3775-2946-4774-A6D7-A971FAF324BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{893F3775-2946-4774-A6D7-A971FAF324BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{893F3775-2946-4774-A6D7-A971FAF324BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{893F3775-2946-4774-A6D7-A971FAF324BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

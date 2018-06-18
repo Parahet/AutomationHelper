@@ -26,49 +26,47 @@ namespace AutomationHelper.Base
 
         public static T UntilNoException<T>(Func<T> f, TimeSpan timeout)
         {
-            var timer = new Stopwatch();
-            timer.Start();
-            var attemps = 0;
-            while (true)
-            {
-                try
-                {
-                    attemps++;
-                    var temp = f();
-                    return temp;
-                }
-                catch (Exception ex)
-                {
-                    if (timer.Elapsed > timeout)
-                        throw new TimeoutException(
-                            $"UntilNoException TIMED OUT ({timeout})(attemps:{attemps})(elapsed:{timer.Elapsed}). {ex.Message}");
-                    Sleep(TimeSpan.FromMilliseconds(50));
-                }
-            }
-        }
+			var timer = new Stopwatch();
+	        timer.Start();
+	        var attemps = 0;
+	        while (true)
+	        {
+		        try
+		        {
+			        attemps++;
+			        var temp = f();
+			        return temp;
+		        }
+		        catch (Exception ex)
+		        {
+			        if (timer.Elapsed > timeout)
+				        throw new TimeoutException($"UntilNoException TIMED OUT ({timeout})(attemps:{attemps})(elapsed:{timer.Elapsed}). {ex.Message}");
+			        Sleep(TimeSpan.FromMilliseconds(50));
+		        }
+	        }
+		}
 
         public static void UntilNoException(Action f, TimeSpan timeout)
         {
-            var timer = new Stopwatch();
-            timer.Start();
-            var attemps = 0;
-            while (true)
-            {
-                try
-                {
-                    Thread.Yield();
-                    attemps++;
-                    f();
-                    return;
-                }
-                catch (Exception ex)
-                {
-                    if (timer.Elapsed > timeout)
-                        throw new TimeoutException(
-                            $"UntilNoException TIMED OUT ({timeout})(attemps:{attemps})(elapsed:{timer.Elapsed}). {ex.Message}");
-                }
-            }
-        }
+			var timer = new Stopwatch();
+	        timer.Start();
+	        var attemps = 0;
+	        while (true)
+	        {
+		        try
+		        {
+			        Thread.Yield();
+			        attemps++;
+			        f();
+			        return;
+		        }
+		        catch (Exception ex)
+		        {
+			        if (timer.Elapsed > timeout)
+				        throw new TimeoutException($"UntilNoException TIMED OUT ({timeout})(attemps:{attemps})(elapsed:{timer}). {ex.Message}");
+		        }
+	        }
+		}
 
         public static void UntilNumberOfExceptions(Action f, int times = 3)
         {

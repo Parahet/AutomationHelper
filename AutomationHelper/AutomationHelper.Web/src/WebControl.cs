@@ -142,7 +142,7 @@ namespace AutomationHelper.Web
 		}
 		#region Keyboard actions
 
-	    public virtual void PressKey(string key)
+	    public virtual void PressKeys(string key)
 	    {
 	        logger?.Info($"Press {key} key for control '{_by}'");
             WebElement.SendKeys(key);
