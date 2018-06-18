@@ -82,7 +82,7 @@ namespace AutomationHelper.Base
                 logger?.Pass($"{methodName} passed. Expected and actual lists are equal");
             else
             {
-                var resultMessage = "";
+                var resultMessage = String.Empty;
                 var expectedTemp = new List<T>(expected);
                 var actualTemp = new List<T>(actual);
                 expectedTemp.RemoveAll(actual.Contains);

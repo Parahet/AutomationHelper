@@ -7,7 +7,6 @@ using System.Runtime.InteropServices;
 using System.Windows.Automation;
 using Accessibility;
 using AutomationHelper.Base;
-using TCDesktopAutomation.Extensions;
 
 
 namespace AutomationHelper.Desktop
@@ -28,9 +27,10 @@ namespace AutomationHelper.Desktop
 		/// Use only for next/previous sibling
 		/// </summary>
 		/// <param name="element"></param>
-		public ControlBase(AutomationElement element)
+		public ControlBase(AutomationElement element, ILog logger = null)
 		{
 			_element = element;
+			this.logger = logger;
 		}
 
 		protected AutomationElement Element

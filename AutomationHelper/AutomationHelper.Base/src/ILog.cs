@@ -6,6 +6,7 @@
         void Pass(string message);
         void Fail(string message);
         void Warn(string message);
-        void AddScreenCapture();
+	    void Debug(string message);
+		void AddScreenCapture();
     }
 }
