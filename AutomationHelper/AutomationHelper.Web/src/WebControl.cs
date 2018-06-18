@@ -81,14 +81,13 @@ namespace AutomationHelper.Web
 		{
 			return WebElement.GetCssValue(propertyName);
 		}
+
 		public virtual void Click()
 		{
 			logger?.Info($"Click on '{_by}'");
-			if (_driver.currentBrowser == Browsers.Firefox)
-				_driver.ExecuteScript("arguments[0].click();", WebElement);
-			else
-				WebElement.Click();
+			WebElement.Click();
 		}
+
 		/// <summary>
 		/// Click to the link with text inside the control
 		/// </summary>
