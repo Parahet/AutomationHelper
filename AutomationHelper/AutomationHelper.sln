@@ -1,11 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.7
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomationHelper.Assert", "AutomationHelper.Assert\AutomationHelper.Assert.csproj", "{19F708B9-8325-448A-BCFD-7B2BB2F32970}"
+	ProjectSection(ProjectDependencies) = postProject
+		{87C230D3-9409-49F0-9CAB-86ED9633736A} = {87C230D3-9409-49F0-9CAB-86ED9633736A}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomationHelper.Web", "AutomationHelper.Web\AutomationHelper.Web.csproj", "{FFC3EF5C-6DAA-4892-9616-0F26C89A571D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{87C230D3-9409-49F0-9CAB-86ED9633736A} = {87C230D3-9409-49F0-9CAB-86ED9633736A}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomationHelper.Base", "AutomationHelper.Base\AutomationHelper.Base.csproj", "{87C230D3-9409-49F0-9CAB-86ED9633736A}"
 EndProject

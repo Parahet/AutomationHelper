@@ -63,6 +63,11 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\AutomationHelper.Base\AutomationHelper.Base.csproj">
+      <Project>{87c230d3-9409-49f0-9cab-86ed9633736a}</Project>
+      <Name>AutomationHelper.Base</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
