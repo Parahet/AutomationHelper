@@ -46,8 +46,7 @@ namespace AutomationHelper.Web
 
 	    public string ChromeInstanceUserProfilePath { get; set; }
         public string FirefoxProfileName { get; set; } = null;
-
-
+		
 	    private void InitDriver()
 		{
 		    switch (browser)
