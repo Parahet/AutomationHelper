@@ -1,0 +1,8 @@
+D:\Projects\AutomationHelper\AutomationHelper\bin\Debug\AutomationHelper.Base.dll
+D:\Projects\AutomationHelper\AutomationHelper\bin\Debug\AutomationHelper.Base.pdb
+D:\Projects\AutomationHelper\AutomationHelper\obj\Debug\AutomationHelper.Base.dll
+D:\Projects\AutomationHelper\AutomationHelper\obj\Debug\AutomationHelper.Base.pdb
+D:\Projects\AutomationHelper\AutomationHelper.Base\bin\Debug\AutomationHelper.Base.dll
+D:\Projects\AutomationHelper\AutomationHelper.Base\bin\Debug\AutomationHelper.Base.pdb
+D:\Projects\AutomationHelper\AutomationHelper.Base\obj\Debug\AutomationHelper.Base.dll
+D:\Projects\AutomationHelper\AutomationHelper.Base\obj\Debug\AutomationHelper.Base.pdb

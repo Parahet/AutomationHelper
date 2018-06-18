@@ -1,0 +1,13 @@
+D:\Projects\AutomationHelper\AutomationHelper.Web\obj\Debug\AutomationHelper.Web.csprojResolveAssemblyReference.cache
+D:\Projects\AutomationHelper\AutomationHelper.Web\bin\Debug\AutomationHelper.Web.dll
+D:\Projects\AutomationHelper\AutomationHelper.Web\bin\Debug\AutomationHelper.Web.pdb
+D:\Projects\AutomationHelper\AutomationHelper.Web\bin\Debug\AutomationHelper.Base.dll
+D:\Projects\AutomationHelper\AutomationHelper.Web\bin\Debug\SeleniumExtras.PageObjects.dll
+D:\Projects\AutomationHelper\AutomationHelper.Web\bin\Debug\SeleniumExtras.WaitHelpers.dll
+D:\Projects\AutomationHelper\AutomationHelper.Web\bin\Debug\WebDriver.dll
+D:\Projects\AutomationHelper\AutomationHelper.Web\bin\Debug\WebDriver.Support.dll
+D:\Projects\AutomationHelper\AutomationHelper.Web\bin\Debug\AutomationHelper.Base.pdb
+D:\Projects\AutomationHelper\AutomationHelper.Web\bin\Debug\WebDriver.xml
+D:\Projects\AutomationHelper\AutomationHelper.Web\bin\Debug\WebDriver.Support.xml
+D:\Projects\AutomationHelper\AutomationHelper.Web\obj\Debug\AutomationHelper.Web.dll
+D:\Projects\AutomationHelper\AutomationHelper.Web\obj\Debug\AutomationHelper.Web.pdb
