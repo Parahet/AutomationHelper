@@ -167,8 +167,47 @@ namespace AutomationHelper.Web
 			_driver.Builder.Release().Build().Perform();
 		}
 		#endregion
-        
-	    public virtual double GetScrollTop()
+		
+		#region Asserts
+		public void AssertBackgroundIs(Color expectedColor, string errMsg = "")
+		{
+			CustomAssert.Equal(expectedColor, Background,
+				$"Background of control '{Class}' is incorrect. {errMsg}");
+		}
+		public void AssertColorIs(Color expectedColor, string errMsg = "")
+		{
+			CustomAssert.Equal(expectedColor, Color,
+				$"Color of control '{Class}' is incorrect. {errMsg}");
+		}
+		public void AssertTextIs(string expectedText, string errMsg = "")
+		{
+			CustomAssert.Equal(expectedText, Text,
+				$"Text of control '{Class}' is incorrect. {errMsg}");
+		}
+
+		public virtual void AssertIsSelected(string errMsg = "")
+		{
+			CustomAssert.True(IsSelected, $"Control '{Class}' should be selected. {errMsg}");
+		}
+		public virtual void AssertIsFocused(string errMsg = "")
+		{
+			CustomAssert.True(IsFocused(), $"Control '{Class}' should be in focus. {errMsg}");
+		}
+
+		public void AssertIsVisibleInside(WebControl parentControl)
+		{
+			CustomAssert.True(parentControl.Left <= Left,
+				$"Child element is not inside parent: Parent element's X coordinate {parentControl.Left} should be less that child's {Left}");
+			CustomAssert.True(parentControl.Top <= Top,
+				$"Child element is not inside parent: Parent element's Y {parentControl.Top} coordinate should be less that child's {Top}");
+			CustomAssert.True(parentControl.Right >= Right,
+				$"Child element is not inside parent: Parent element's Right {parentControl.Right} coordinate should be less that child's {Right}");
+			CustomAssert.True(parentControl.Bottom >= Bottom,
+				$"Child element is not inside parent: Parent element's Bottom {parentControl.Bottom} coordinate should be less that child's {Bottom}");
+		}
+
+		#endregion
+		public virtual double GetScrollTop()
 	    {
 	        var scrollTop = _driver.ExecuteScript("return arguments[0].scrollTop;", WebElement).ToString();
 	        logger?.Info($"Scroll top is: {scrollTop}, for element '{_by}'");

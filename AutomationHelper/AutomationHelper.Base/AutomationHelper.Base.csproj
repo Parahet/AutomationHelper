@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\Assert.cs" />
     <Compile Include="src\EnumExtensions.cs" />
     <Compile Include="src\ILog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
