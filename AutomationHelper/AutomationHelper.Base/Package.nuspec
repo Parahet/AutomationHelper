@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>AutomationHelper.Base</id>
+    <version>1.0.0</version>
+    <authors>Eugene.Parakhonko</authors>
+    <owners>Eugene.Parakhonko</owners>
+    <licenseUrl>https://github.com/Parahet/AutomationHelper/tree/master/AutomationHelper/AutomationHelper.Base</licenseUrl>
+    <projectUrl>https://github.com/Parahet/AutomationHelper/tree/master/AutomationHelper/AutomationHelper.Base</projectUrl>
+    <iconUrl>https://github.com/Parahet/AutomationHelper/tree/master/AutomationHelper/AutomationHelper.Base</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Base classes for automation</description>
+    <releaseNotes>First release.</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>Automation Helper</tags>
+  </metadata>
+  <files>
+    <file src="bin\Release\AutomationHelper.Base.dll" target = "lib"/>
+</files>
+</package>
