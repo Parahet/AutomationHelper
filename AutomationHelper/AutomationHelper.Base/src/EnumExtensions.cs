@@ -2,7 +2,7 @@
 
 namespace AutomationHelper.Base
 {
-	class TextAttribute : Attribute
+	public class TextAttribute : Attribute
 	{
 		public string Text;
 		public TextAttribute(string text)
@@ -11,7 +11,7 @@ namespace AutomationHelper.Base
 		}
 	}
 
-	public static partial class EnumExtensions
+	public static class EnumExtensions
 	{
 		public static string ToText(this Enum enumeration)
 		{
