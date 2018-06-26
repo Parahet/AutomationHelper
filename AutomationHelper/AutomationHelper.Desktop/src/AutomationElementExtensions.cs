@@ -353,10 +353,18 @@ namespace AutomationHelper.Desktop
 				return found;
 			}, timeout);
 		}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="element"></param>
+		/// <param name="locator"></param>
+		/// <param name="timeout">Default is 20 seconds</param>
+		/// <returns></returns>
 		public static AutomationElement FindParent(this AutomationElement element, Locator locator,
 			TimeSpan timeout = default(TimeSpan))
 		{
-			timeout = timeout == default(TimeSpan) ? TruCodeSettings.Default.FindElementTimeout : timeout;
+			timeout = timeout == default(TimeSpan) ? TimeSpan.FromSeconds(20) : timeout;
 			return Wait.UntilNoException(() =>
 			{
 				var found = element.FindParentOrNull(locator);
@@ -365,10 +373,18 @@ namespace AutomationHelper.Desktop
 				return found;
 			}, timeout);
 		}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="element"></param>
+		/// <param name="locator"></param>
+		/// <param name="timeout">Default is 20 seconds</param>
+		/// <returns></returns>
 		public static AutomationElement FindDescendant(this AutomationElement element, Locator locator,
 			TimeSpan timeout = default(TimeSpan))
 		{
-			timeout = timeout == default(TimeSpan) ? TruCodeSettings.Default.FindElementTimeout : timeout;
+			timeout = timeout == default(TimeSpan) ? TimeSpan.FromSeconds(20) : timeout;
 			return Wait.UntilNoException(() =>
 			{
 				var found = element.FindDescendantOrNull(locator);
@@ -377,10 +393,18 @@ namespace AutomationHelper.Desktop
 				return found;
 			}, timeout);
 		}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="element"></param>
+		/// <param name="locator"></param>
+		/// <param name="timeout">Default is 20 seconds</param>
+		/// <returns></returns>
 		public static AutomationElement LastDescendant(this AutomationElement element, Locator locator,
 			TimeSpan timeout = default(TimeSpan))
 		{
-			timeout = timeout == default(TimeSpan) ? TruCodeSettings.Default.FindElementTimeout : timeout;
+			timeout = timeout == default(TimeSpan) ? TimeSpan.FromSeconds(20) : timeout;
 			return Wait.UntilNoException(() =>
 			{
 				var all = element.FindAll(TreeScope.Descendants, locator.Condition);
