@@ -6,9 +6,9 @@ namespace AutomationHelper.Base
 {
 	public class ProcessHelper
 	{
-		public static void KillProcess(string processName, ILog logger = null)
+		public static void KillProcess(string processName, TimeSpan waitTimeout = default(TimeSpan), ILog logger = null)
 		{
-			logger?.Info($"Killing existing Application: '{processName}'");
+			logger?.Info($"Killing existing processes: '{processName}'");
 
 			var processes = Process.GetProcessesByName(processName);
 			logger?.Info($"Found {processes.Count()} processes by name: {processName}");
@@ -20,7 +20,7 @@ namespace AutomationHelper.Base
 					proc.WaitForExit();
 				}
 			}
-			WaitTillProcessNotExist(processName);
+			WaitTillProcessNotExist(processName, waitTimeout, logger);
 		}
 
 		/// <summary>
@@ -32,6 +32,7 @@ namespace AutomationHelper.Base
 		public static void WaitTillProcessNotExist(string processName, TimeSpan timeout = default(TimeSpan), ILog logger = null)
 		{
 			timeout = timeout == default(TimeSpan) ? TimeSpan.FromSeconds(10) : timeout;
+			logger?.Info($"Wait ({timeout.TotalSeconds} seconds) till process '{processName}' not exist");
 			Wait.UntilTrue(() => !IsProcessExist(processName), $"{processName} process is still exist",
 				timeout);
 		}
@@ -41,9 +42,10 @@ namespace AutomationHelper.Base
 		/// </summary>
 		/// <param name="processName"></param>
 		/// <param name="timeout">The default Timeout is 10 seconds</param>
-		public static void  WaitTillProcessAppear(string processName, TimeSpan timeout = default(TimeSpan))
+		public static void WaitTillProcessAppear(string processName, TimeSpan timeout = default(TimeSpan), ILog logger = null)
 		{
 			timeout = timeout == default(TimeSpan) ? TimeSpan.FromSeconds(10) : timeout;
+			logger?.Info($"Wait ({timeout.TotalSeconds} seconds) while process '{processName}' appear");
 			Wait.UntilTrue(() => IsProcessExist(processName), $"{processName} process is still not exist",
 				timeout);
 		}
